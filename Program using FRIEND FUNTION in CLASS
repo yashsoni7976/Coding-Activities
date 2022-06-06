@@ -1,0 +1,52 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+class istance
+{
+	private:
+		int f1,f2,i1,i2;
+	public:
+		istance()
+		{
+			cout<<"Enter details 1 :-";
+			cout<<"\n\nEnter Feet : ";
+			cin>>f1;
+			cout<<"\nEnter inches : ";
+			cin>>i1;
+			cout<<"\nEnter details 2 :-";
+			cout<<"\n\nEnter Feet : ";
+			cin>>f2;
+			cout<<"\nEnter inches : ";
+			cin>>i2;
+			//output(distance d);
+		}
+
+		friend void output(istance d);
+};
+
+void output(istance d)
+{
+	int t;
+	d.f1=d.f1+d.f2;
+	d.i1=d.i1+d.i2;
+	while(d.i1>12)
+	{
+	if(d.i1>12)
+	{
+		t=d.i1/12;
+		d.f1+=t;
+		d.i1-=(12*t);
+	}
+	}
+	cout<<"\n Feet : inches "<<d.f1<<":"<<d.i1;
+}
+
+int main()
+{
+	system("cls");
+	istance d;
+	output(d);
+	getch();
+	return 0;
+}
