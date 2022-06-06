@@ -1,0 +1,36 @@
+#include<iostream>
+#include<conio.h>
+#define max 100
+using namespace std;
+
+class student
+{
+	private:
+	int age;
+	char branch[max],name[max];
+
+	public:
+	student()
+	{
+		cout<<"Enter Student Details ";
+		cout<<"\nEnter Name of Student : ";
+		cin>>name;
+		cout<<"\nEnter Branch : ";
+		cin>>branch;
+		cout<<"\nEnter Age : ";
+		cin>>age;
+
+		cout<<"\n\nPrinting Details";
+		cout<<"\nName of Student : "<<name;
+		cout<<"\nBranch : "<<branch;
+		cout<<"\nAge : "<<age;
+	}
+};
+
+int main()
+{
+	system("cls");
+	student s;
+	getch();
+	return 0;
+}
